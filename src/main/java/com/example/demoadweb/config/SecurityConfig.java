@@ -20,6 +20,7 @@ public class SecurityConfig {
         // @formatter:off
         http.authorizeHttpRequests(c -> {
             c.requestMatchers("/public/**").permitAll();
+            c.requestMatchers("/").permitAll();
             c.requestMatchers("/index.html").permitAll();
             c.requestMatchers("/private/**").authenticated();
         });
